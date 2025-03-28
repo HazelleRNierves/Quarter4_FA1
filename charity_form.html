@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Sign-Up Form</title>
+</head>
+<body>
+  <h1>Philippine Animal Welfare Society</h1>
+  <p>Philippine Animal Welfare Society also known as PAWS is an organization that dedicates their whole heart to animal welfare. They have more than one goal for the animals but focuses on the 3 main factors. Firstly, animal rescue, to save animals from physical or neglection from its owners, or prevent any harm that may inflict to innocent and vulnerable animals. Secondly, animal rehabilitation, aiming to help animals recover and animals from injuries,disease, and sickness. Third and last, adoption, just like children every animals deserves a loving family, home, and enjoyment of life. Animals are like humans who has their own role in life but wish for fulfillment.</p>
+  <form id="charForm">
+     <label for="firstName">First Name:</label>
+     <input type="text" id="firstName" name="firstName" required><br></br>
+
+     <label for="lastName">Last Name:</label>
+     <input type="text" id="lastName" name="lastName" required><br></br>
+
+     <label>Sex:</label><br>
+     <input type="radio" id="male" name="sex" value="male" required>
+     <label for="male">Male</label><br>
+     <input type="radio" id="female" name="sex" value="female" required>
+     <label for="female">Female</label><br>
+     <input type="radio" id="notTosay" name="sex" value="notTosay" required>
+     <label for="notTosay">Prefer not to say</label><br></br>
+  
+     <label for="email">Email Address:</label>
+     <input type="text" id="email" name="email" required><br></br>
+
+     <label for="contactNumber">Contact Number:</label>
+     <input type="text" id="contactNumber" name="contactNumber"><br></br>
+
+     <button type="submit">Submit</button>
+     <button type="reset">Reset</button>
+  </form>
+  
+  <script>
+      document.getElementById('charForm').onsubmit = function() 
+      {
+        if (!this.checkValidity())
+         {
+           alert('Please fill in all required fields.');
+           return false
+         }
+      }
+  </script>
+</body>
+</html>
